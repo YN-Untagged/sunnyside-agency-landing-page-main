@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fraunces&display=swap');
+
+:root{
+
+    /*Primary*/
+    --Softred: hsl(7, 99%, 70%);
+    --Yellow: hsl(51, 100%, 49%);
+    --DarkDesaturatedCyan : hsl(167, 40%, 24%); /*(graphic design text)*/
+    --DarkBlue : hsl(198, 62%, 26%); /*(photography text)*/
+    --DarkModerateCyan : hsl(168, 34%, 41%);/*(footer)*/
+
+    /*Neutral*/
+
+    --VeryDarkDesaturatedBlue: hsl(212, 27%, 19%);
+    --VeryDarkGrayishBlue: hsl(213, 9%, 39%);
+    --DarkGrayishBlue: hsl(232, 10%, 55%);
+    --GrayishBlue: hsl(210, 4%, 67%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body{
+    font-size: 18px;
+    margin: 0;
+    font-family: 'Barlow', sans-serif;
+}
+
+body header, footer, main .testm-container{
+    padding: 30px 50px 30px;
+}
+
+header {
+    background-image: url(../images/desktop/image-header.jpg);
+    background-size: 100% 100%;
+    background-position: center;
+    color : var(--White);
+    text-align: center;
+    height: 700px;
+
+}
+
+header h1{
+    font-size: 80px;
+}
+
+footer{
+    background-color: var(--DarkModerateCyan);
+    color: var(--DarkDesaturatedCyan);
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family:'Fraunces', sans-serif;
+    font-weight: 700 900;
+}
+
+/*Navigation Section*/
+.nav-container{
+    overflow: hidden;
+    text-align: right;
+    padding-top: 20px;  
+    padding-bottom: 50px;
+}
+
+.nav-container .logo{
+    float: left;
+}
+
+.nav-container a {
+    text-decoration: none;
+    color: var(--White);
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+.nav-container a:hover{
+    background-color: var(--Yellow);
+}
+
+.nav-container .btn {
+    color : black;
+    background-color: var(--White);
+}
+
+.nav-container .btn:hover {
+    background-color: var(--Softred);
+}
+/*Information Grid Section*/
+.info-grid{
+    margin :0;
+    padding:0;
+    color: var(--DarkGrayishBlue);
+}
+
+.info-grid ::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.info-item {
+    position: relative;
+    text-align: center left;
+    float: left;
+    width:50%;
+    height:560px;
+}
+
+.info-item img{
+    width: 100%;
+}
+
+.info-item .centered h1, .bottom-center h1{
+    color: --VeryDarkDesaturatedBlue;
+}
+
+.centered{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bottom-center{
+    text-align: center;
+    position: absolute;
+    padding: 100px;
+    bottom: 20px;
+}
+
+.text-cyan{
+    color: var(--DarkModerateCyan);
+}
+
+.text-dark-cyan{
+    color: var(--DarkDesaturatedCyan);
+}
+.text-blue{
+    color: var(--DarkBlue);
+}
+
+.text-dark-blue{
+    color: var(--VeryDarkDesaturatedBlue);
+}
+
+.yellow-underline{
+    text-decoration: 4px underline var(--Yellow);
+}
+
+.red-underline{
+    text-decoration: 4px underline var(--Softred);
+}
+
+.centered div a{
+    font-weight: bold;
+}
+
+/*Testimonal section*/
+.testm-container{
+    display: block;
+    text-align: center;
+}
+
+.testm-container::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.testm-container h1{
+    color: var(--DarkGrayishBlue);
+}
+
+.testm-card{
+    float:left;
+    width: 33%;
+    text-align: center;
+    color: var(--VeryDarkGrayishBlue);
+
+}
+
+.testm-card .profile-name{
+    color: var(--VeryDarkDesaturatedBlue);
+    font-weight: bolder;
+}
+
+.testm-card .profession{
+    color: var(--GrayishBlue);
+    font-size: small;
+}
+
+.testm-card img{
+    border-radius: 50%;
+}
+
+.testm-card p{
+    padding: 20px 20px;
+}
+
+
+/*Gallery Section*/
+.gallery{
+    margin: 0;
+    padding:0;
+}
+
+.gallery::after{
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+.gallery-column{
+    float:left;
+    width: 25%;
+}
+
+.gallery-column img {
+    width: 100%;
+    height: auto;
+}
+/* footer*/
+.socail-media a{
+    padding: 10px;
+}
+
+.footer-links a{
+    padding: 50px 20px 70px 30px;
+}
+/*attribution*/
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
