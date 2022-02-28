@@ -12,23 +12,25 @@
 </head>
 <body>
   <header>
-    <nav class="nav-container">
+    <nav class="nav-container" id="nav-container">
       <div class="logo">
         <img src="images/logo.svg" alt="logo"/>
       </div>
       <a href="#">About</a>
       <a href="#">Services</a>
       <a href="#">Projects</a>
-      <a class="btn" href="#">Contact</a>
+      <a class="btn" href="#" onclick="document.getElementById('info-modal').style.display = 'block';">
+        Contact
+      </a>
     </nav>
     
-  
     <h1>WE ARE CREATIVES</h1>
-    <img src="images/icon-arrow-down.svg" alt=""/>
+    <img class="bouncing-arrow" src="images/icon-arrow-down.svg" alt="arrow" 
+    onclick="document.getElementById('info-grid').scrollIntoView();"/>
   </header>
   
   <main>
-    <div class="info-grid">
+    <div class="info-grid" id="info-grid">
       <div class="info-item">
         <div class="centered">
           <h1 class="text-dark-blue">Transform your brand</h1>
@@ -81,7 +83,6 @@
   
     <div class="testm-container">
       <h1>CLIENT TESTIMONIALS</h1>
-  
       <div class="testm-card">
         <img alt="photo" src="images/image-emily.jpg"/>
         <p>
@@ -91,7 +92,6 @@
         <span class="profession">Marketing Director</span>
       </div>
       
-    
       <div class="testm-card">
         <img alt="photo" src="images/image-thomas.jpg"/>
         <p>
@@ -110,23 +110,22 @@
         <div class="profile-name">Jennie F.</div> 
         <span class="profession">Business Owner</span>
       </div>
-      
     </div>
+
     <div class="row">
       <div class="gallery-column">
-        <img src="images/desktop/image-gallery-milkbottles.jpg" alt="milkbottles"/>
+        <img class="g-image" src="images/desktop/image-gallery-milkbottles.jpg" alt="milkbottles"/>
       </div>
       <div class="gallery-column">
-        <img src="images/desktop/image-gallery-orange.jpg" alt="orange"/>
+        <img class="g-image" src="images/desktop/image-gallery-orange.jpg" alt="orange"/>
       </div>
       <div class="gallery-column">
-        <img src="images/desktop/image-gallery-cone.jpg" alt="cone"/>
+        <img class="g-image" src="images/desktop/image-gallery-cone.jpg" alt="cone"/>
       </div>
       <div class="gallery-column">
-        <img src="images/desktop/image-gallery-sugarcubes.jpg" alt="sugarcubes"/>
+        <img class="g-image" src="images/desktop/image-gallery-sugarcubes.jpg" alt="sugarcubes"/>
       </div>
     </div>
-    
   </main>
 
   <footer>
@@ -136,17 +135,54 @@
       <a>Services</a>
       <a>Projects</a>
     </div>
-    <div class="socail-media">
-      <a><img src="images/icon-facebook.svg" alt="facebook"/></a>
-      <a><img src="images/icon-instagram.svg" alt="instagram"/></a>
-      <a><img src="images/icon-twitter.svg" alt="twitter"/></a>
-      <a><img src="images/icon-pinterest.svg" alt="pinterest"/></a>
+    <div class = "socail-media">
+      <a href="https://facebook.com/" target="blank"><img src="images/icon-facebook.svg" alt="facebook"/></a>
+      <a href="https://instagram.com/" target="blank"><img src="images/icon-instagram.svg" alt="instagram"/></a>
+      <a href="https://twitter.com/" target="blank"><img src="images/icon-twitter.svg" alt="twitter"/></a>
+      <a href="https://pinterest.com/" target="blank"><img src="images/icon-pinterest.svg" alt="pinterest"/></a>
     </div>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Your Name Here</a>.
     </div>
   </footer>
-    
+
+  <div class="modal" id="info-modal">
+    <div class="modal-main">
+
+      <div class="modal-header">
+        <button type="button" class="btn-close" 
+         onclick="document.getElementById('info-modal').style.display = 'none';">
+          &times;
+        </button>
+        <h1>Contact Us</h1>
+        <div class = "socail-media">
+          <a href="https://facebook.com/" target="blank"><img src="images/icon-facebook.svg" alt="facebook"/></a>
+          <a href="https://instagram.com/" target="blank"><img src="images/icon-instagram.svg" alt="instagram"/></a>
+          <a href="https://twitter.com/" target="blank"><img src="images/icon-twitter.svg" alt="twitter"/></a>
+          <a href="https://pinterest.com/" target="blank"><img src="images/icon-pinterest.svg" alt="pinterest"/></a>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div class="row">
+            <form>
+              <label >Full Name</label>
+              <input type="text" title="name" required>
+        
+              <label>Email <Address></Address></label>
+              <input type="email" title="email" required>
+  
+              <label>Message <Address></Address></label>
+              <textarea type="password" title="message" rows="10" required></textarea>
+              <button type="submit" class="btn-submit">Send</button>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
+
+<script src="js/site.js"></script>

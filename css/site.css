@@ -35,7 +35,7 @@ header {
     background-position: center;
     color : var(--White);
     text-align: center;
-    height: 700px;
+    height: 710px;
 
 }
 
@@ -80,11 +80,26 @@ h1, h2, h3, h4, h5, h6{
 .nav-container .btn {
     color : black;
     background-color: var(--White);
+    font-weight: bolder;
 }
 
 .nav-container .btn:hover {
     background-color: var(--Softred);
+    color: var(--White);
 }
+
+@keyframes bounce{
+    from { transform: translate3d(0, 0, 0);}
+    to { transform: translate3d(0, 180px, 0);}
+}
+
+
+.bouncing-arrow{
+    animation: bounce 0.7s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
 /*Information Grid Section*/
 .info-grid{
     margin :0;
@@ -144,11 +159,11 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .yellow-underline{
-    text-decoration: 4px underline var(--Yellow);
+    box-shadow: inset 0 -7px 0 var(--Yellow)!important;
 }
 
 .red-underline{
-    text-decoration: 4px underline var(--Softred);
+    box-shadow: inset 0 -7px 0 var(--Softred)!important;
 }
 
 .centered div a{
@@ -157,18 +172,20 @@ h1, h2, h3, h4, h5, h6{
 
 /*Testimonal section*/
 .testm-container{
-    display: block;
     text-align: center;
+    display: block;
 }
 
 .testm-container::after{
     content: "";
     clear: both;
+    padding-bottom: 70px;
+    padding-top: 70px;
     display: table;
 }
 
 .testm-container h1{
-    color: var(--DarkGrayishBlue);
+    color: var(--GrayishBlue);
 }
 
 .testm-card{
@@ -176,7 +193,6 @@ h1, h2, h3, h4, h5, h6{
     width: 33%;
     text-align: center;
     color: var(--VeryDarkGrayishBlue);
-
 }
 
 .testm-card .profile-name{
@@ -215,7 +231,7 @@ h1, h2, h3, h4, h5, h6{
     width: 25%;
 }
 
-.gallery-column img {
+.gallery-column .g-image{
     width: 100%;
     height: auto;
 }
@@ -225,8 +241,102 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .footer-links a{
-    padding: 50px 20px 70px 30px;
+    padding-left: 50px;
+}
+
+footer div {
+    padding: 30px;
 }
 /*attribution*/
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+
+/*Modal*/
+.modal {
+    display: none;
+    margin: auto;
+    padding-top: 20px;
+    z-index: 1;
+    position: fixed;
+    background-color: rgb(63, 61, 61);
+    background-color: rgba(0,0,0,0.4);
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+  
+.modal-main {
+    color: var(--White);
+    margin: auto;
+    padding: 20px;
+    width: 50%;
+    text-align:center;
+    border-radius: 15px ;
+    background-color: var(--Yellow);
+}
+
+.btn-close {
+    float: right;
+    font-size: 36px;
+    font-weight: bold;
+    border-radius: 50%;
+    background: var(--Softred);
+    color: var(--White);
+    border: none;
+    padding: 5px 10px;
+}
+
+.btn-submit{
+    background-color: var(--White);
+    color: var(--Softred);
+    padding: 10px 15px;
+    border: 3px var(--Softred);
+    border-radius: 20px;
+    font-weight: bolder;
+}
+
+.btn-submit :hover{
+    color: var(--White);
+    background-color: var(--Softred);
+}
+
+.modal-body {
+    text-align:left;
+    background-color: transparent;
+}
+
+.modal-body .row {
+    padding: 50px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column-large{
+    width: 75%;
+    margin: auto;
+    float:left;
+}
+
+input, textarea{
+    background-color: transparent;
+    border: 3px solid var(--Softred);
+    border-radius: 5px;
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    color: var(--VeryDarkDesaturatedBlue);
+}
+
+.text-vertical{
+    height : 100px;
+    line-height : 100px;
+}
